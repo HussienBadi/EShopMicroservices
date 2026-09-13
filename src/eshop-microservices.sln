@@ -35,6 +35,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Messaging", "BuildingBlocks\BuildingBlocks.Messaging\BuildingBlocks.Messaging.csproj", "{2DF757B3-D8E4-4C09-8E32-FAEE3A637C32}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{ACA0DBA8-BAE4-4E30-80F2-22B8A91BA03C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{E68C82E9-1A70-4611-A8C5-586C761B5DBA}"
+	ProjectSection(SolutionItems) = preProject
+		deploy.yml = deploy.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +106,7 @@ Global
 		{68F84E15-E9CF-4719-B763-300F5BDD6BEF} = {C3E71EE3-9AC3-40FB-8499-48D614804D22}
 		{DB12944C-E5DC-4DB3-A284-9E9B5F01D0CC} = {C3E71EE3-9AC3-40FB-8499-48D614804D22}
 		{2DF757B3-D8E4-4C09-8E32-FAEE3A637C32} = {91AB81CF-4CB1-4113-9B8E-1F34A43CA557}
+		{E68C82E9-1A70-4611-A8C5-586C761B5DBA} = {ACA0DBA8-BAE4-4E30-80F2-22B8A91BA03C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A29FA97-4819-4A24-9C98-BD0A6B7829EC}
