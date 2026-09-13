@@ -23,11 +23,21 @@ jobs:
         with:
           dotnet-version: '9.x'
 
-      - name: Build with dotnet
-        run: dotnet build --configuration Release
+      - name: Restore solution
+        run: dotnet restore ./src/eshop-microservices.sln
 
-      - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      - name: Build solution
+        run: dotnet build ./src/eshop-microservices.sln --configuration Release --no-restore
+
+      - name: Publish Ordering API
+        run: dotnet publish ./src/Services/Ordering/Ordering.API/Ordering.API.csproj --configuration Release --output ./publish
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          name: .net-app
+          path: ./publish
+
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
