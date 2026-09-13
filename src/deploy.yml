@@ -28,7 +28,7 @@ jobs:
       run: dotnet build ./src/eshop-microservices.sln --configuration Release --no-restore
 
     - name: Publish
-      run: dotnet publish ./Services/Ordering/Ordering.API.csproj --configuration Release --output ./publish
+      run: ./src/Services/Ordering/Ordering.API/Ordering.API.csproj --configuration Release --output ./publish
 
     - name: Azure Login (Client Credentials)
       uses: azure/login@v2
