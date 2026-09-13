@@ -22,13 +22,13 @@ jobs:
         dotnet-version: '9.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore ./src/eshop-microservices.csproj
+      run: dotnet restore ./src/eshop-microservices.sln
 
     - name: Build
-      run: dotnet build ./src/eshop-microservices.csproj --configuration Release --no-restore
+      run: dotnet build ./src/eshop-microservices.sln --configuration Release --no-restore
 
     - name: Publish
-      run: dotnet publish ./src/eshop-microservices.csproj --configuration Release --output ./publish
+      run: dotnet publish ./Services/Ordering/Ordering.API.csproj --configuration Release --output ./publish
 
     - name: Azure Login (Client Credentials)
       uses: azure/login@v2
